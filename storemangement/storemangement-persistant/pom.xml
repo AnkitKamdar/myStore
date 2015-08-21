@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>jar</packaging>
+  
+   <parent>
+    <groupId>com.sm.svc</groupId>
+  	<artifactId>storemangement</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<!-- <relativePath>../storemangement</relativePath> -->
+  </parent>
+  <artifactId>storemangement-persistant</artifactId>
+  <name>storemanagement-persistant</name>
+   
+  <dependencies>
+<!--   <dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis-spring</artifactId>
+		
+	</dependency>
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		
+	</dependency>
+	<dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		
+	</dependency>
+ -->  
+</dependencies>
+<properties>
+		<spring.version>4.2.0.RELEASE</spring.version>
+		<mybatis-spring.version>1.2.1</mybatis-spring.version>
+		<mybatis-version>3.2.3</mybatis-version>
+		<postgresql-version>9.3-1100-jdbc41</postgresql-version>
+  </properties>	  
+</project>
