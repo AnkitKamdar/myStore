@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sm.svc.dao.StoreMapper" >
+ 
+    <resultMap id="StoreMap" type="com.sm.svc.domains.Store" >
+        <id column="store_id" property="storeId" />
+        <result column="store_name" property="storeName" />
+        <result column="store_address" property="storeAddress"/>
+        <result column="store_type" property="storeType"/>
+        <result column="store_locality" property="storeLocality"/>
+        <result column="store_city" property="storeCity"/>
+        <result column="store_mob_no" property="storeMobNo"/>
+    </resultMap>
+     
+ 
+    <select id="selectAll" resultMap="StoreMap">
+        SELECT * FROM store_management
+    </select>
+ 
+</mapper>

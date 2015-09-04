@@ -9,4 +9,26 @@
   <artifactId>storemanagement-services</artifactId>
   <name>storemangement-services</name>
   <description>storemangement-services</description>
+  <dependencies>
+     <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+	 </dependency>
+	 <dependency>
+	    <groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+	  </dependency>
+	  <dependency>
+	     <groupId>com.sm.svc</groupId>
+		 <artifactId>storemangement-persistant</artifactId>
+	  </dependency>
+	  <dependency>
+		 <groupId>com.sm.svc</groupId>
+		 <artifactId>storemangement-domains</artifactId>
+	  </dependency>
+	  <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+	  </dependency>
+  </dependencies>
 </project>
