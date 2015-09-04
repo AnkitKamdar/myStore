@@ -37,22 +37,17 @@
 		    <artifactId>storemangement-domains</artifactId>
 	   </dependency>
    </dependencies>
-   
-  
-
- <build>
-   
-   <resources>
-     <resource>
-      <directory>src/main/java</directory>
-			         <filtering>true</filtering>
-			         <includes>
-			             <include>**/*.xml</include>
-			         </includes>
-     </resource>
-   </resources>
-  
- </build>
+   <build>
+	  <resources>
+	     <resource>
+	      	<directory>src/main/java</directory>
+			<filtering>true</filtering>
+			<includes>
+			    <include>**/*.xml</include>
+		    </includes>
+	     </resource>
+	  </resources>
+    </build>
 
 </project>
    
