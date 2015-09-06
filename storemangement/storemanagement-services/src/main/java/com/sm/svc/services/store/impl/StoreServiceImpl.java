@@ -30,4 +30,10 @@ public class StoreServiceImpl implements StoreService{
     	   return storeMapper.selectAll();
     	   //return "this is my first store";
        }
+
+	public void createStore(final Store _store) {
+		storeMapper.createStore(_store);
+		// TODO Auto-generated method stub
+		
+	}
 }
