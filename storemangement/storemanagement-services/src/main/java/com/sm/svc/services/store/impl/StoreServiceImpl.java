@@ -14,20 +14,30 @@ import com.sm.svc.domains.Store;
 
 /**
  * @author user
- *
+ * 
  */
 @Service
-public class StoreServiceImpl implements StoreService{
-	  @Autowired
-	
-	  private StoreMapper storeMapper;
+public class StoreServiceImpl implements StoreService {
+	@Autowired
+	private StoreMapper storeMapper;
 
-	   public StoreServiceImpl(){
-		   
-	   }
-	
-       public List<Store> getStore(){
-    	   return storeMapper.selectAll();
-    	   //return "this is my first store";
-       }
+	public StoreServiceImpl() {
+
+	}
+
+	public List<Store> getStore() {
+		return storeMapper.selectAll();
+		// return "this is my first store";
+	}
+
+	public void updateStore(Store store) {
+		// TODO Auto-generated method stub
+		storeMapper.updateStore(store);
+	}
+
+	public void createStore(final Store _store) {
+		storeMapper.createStore(_store);
+		// TODO Auto-generated method stub
+		
+	}
 }

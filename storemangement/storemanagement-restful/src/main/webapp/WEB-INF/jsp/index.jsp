@@ -5,8 +5,40 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<style type="text/css">
+body {
+	background-color: #CCC;
+	margin:80px 80px 100px 100px;
+}
+div#header {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	padding:20px;
+}
+div#footer {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	padding:8px;
+}
+</style>
 </head>
 <body>
-   <h1>Welcome to Store management ..</h1>
+	<div id="header">
+		<h1>Welcome to Store management</h1>
+	</div>
+	<div id="content">
+		<p>Content</p>
+	</div>
+	<div id="footer">
+		<p>This is a footer</p>
+	</div>
 </body>
 </html>

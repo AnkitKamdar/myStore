@@ -16,5 +16,9 @@
     <select id="selectAll" resultMap="StoreMap">
         SELECT * FROM store_master
     </select>
+    
+    <update id="updateStore" parameterType="com.sm.svc.domains.Store">
+    	UPDATE store_master SET store_name = #{storeName} where store_id = #{storeId}
+    </update>
  
 </mapper>
