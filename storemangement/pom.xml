@@ -117,6 +117,11 @@
 			<artifactId>jersey-server</artifactId>
 			<version>${jersey.version}</version>
 		</dependency>
+		<dependency>
+   		   <groupId>javax.xml.bind</groupId>
+   		   <artifactId>jaxb-api</artifactId>
+   		   <version>2.2.11</version>
+   	    </dependency>
 	
 		<dependency>
 		    <groupId>com.sm.svc</groupId>
@@ -168,7 +173,7 @@
 		<postgresql-version>9.3-1100-jdbc41</postgresql-version>
 		<project.version>0.0.1-SNAPSHOT</project.version>
 		<commons.logging.version>1.1.3</commons.logging.version>
-		<jersey.version>1.8</jersey.version>
+		<jersey.version>1.12</jersey.version>
 		<commons-dbcp-version>1.4</commons-dbcp-version>
   </properties>	
 </project>

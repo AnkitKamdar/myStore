@@ -9,4 +9,10 @@
   
   <artifactId>storemangement-domains</artifactId>
   <name>storemangement-domains</name>
+  <dependencies>
+      <dependency>
+   		   <groupId>javax.xml.bind</groupId>
+   		   <artifactId>jaxb-api</artifactId>
+   	    </dependency>
+  </dependencies>
 </project>

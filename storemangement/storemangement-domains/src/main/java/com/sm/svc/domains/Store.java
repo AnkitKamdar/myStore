@@ -5,10 +5,16 @@ package com.sm.svc.domains;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  * @author user
  *
  */
+@XmlRootElement 
+@XmlType(name = "store", propOrder = { "storeId", "storeName", "storeAddress", "storeType", "storeLocality",
+"storeCity", "storeMobNo"})
 public class Store implements Serializable{
 	
 	/**
