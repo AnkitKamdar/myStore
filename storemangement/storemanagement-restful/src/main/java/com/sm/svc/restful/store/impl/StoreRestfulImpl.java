@@ -7,11 +7,12 @@ import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
-import javax.ws.rs.PUT;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -34,11 +35,15 @@ public class StoreRestfulImpl  implements StoreRestful{
 	
 	@GET
 	@Path("/getStore")
-	@Produces("application/json")
+	@Produces(MediaType.APPLICATION_XML)
 	public Response getStore(){
 		List<Store> result = storeService.getStore();
-
-		return Response.status(200).entity(result).build();
+		/*Stores stores = new Stores();
+		stores.setStores(result);*/
+		GenericEntity<List<Store>> storeList = new GenericEntity<List<Store>>(result){};
+        return Response.status(200).entity(storeList).build();
+       // return result;
+		//return Response.status(200).entity(result).build();
 	}
     @POST
     @Path("/createStore")
