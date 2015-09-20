@@ -18,5 +18,21 @@ public interface StoreRestful{
 	 */
 	Response createStore(Store _store);
 	
-	public Response updateStore(String storeId, Store store);
+	/**
+	 * This method is used to update a store by storeId
+	 * @return
+	 */
+	public Response updateStore(int storeId, Store store);
+	
+	/**
+	 * This method is used to get a store by storeId
+	 * @return
+	 */
+	public Response getStoreById(int storeType);
+	
+	/**
+	 * This method is used to get a store by storeName
+	 * @return
+	 */
+	public Response getStoreByName(String storeName);
 }

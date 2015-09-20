@@ -31,13 +31,20 @@ public class StoreServiceImpl implements StoreService {
 	}
 
 	public void updateStore(Store store) {
-		// TODO Auto-generated method stub
 		storeMapper.updateStore(store);
 	}
 
 	public void createStore(final Store _store) {
 		storeMapper.createStore(_store);
-		// TODO Auto-generated method stub
-		
+	}
+
+	public Store getStoreById(int storeType) {
+		Store result = storeMapper.getStoreById(storeType); 
+		return result;
+	}
+
+	public Store getStoreByName(String storeName) {
+		Store result = storeMapper.getStoreByName(storeName);
+		return result;
 	}
 }

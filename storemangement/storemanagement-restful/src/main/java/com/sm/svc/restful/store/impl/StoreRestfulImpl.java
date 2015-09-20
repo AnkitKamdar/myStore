@@ -47,10 +47,10 @@ public class StoreRestfulImpl  implements StoreRestful{
 	}
     @POST
     @Path("/createStore")
-	//@Produces("application/json")
-    @Consumes("application/json")
+	@Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_XML)
 	public Response createStore(final Store _store) {
-    	storeService.createStore(_store);
+    	storeService.createStore(_store);	
 		// TODO Auto-generated method stub
     	return Response.status(200).entity("Store Created Successfully").build();
 	}
@@ -59,10 +59,35 @@ public class StoreRestfulImpl  implements StoreRestful{
 	@Path("/updateStore/{storeId}")
 	@Consumes({MediaType.APPLICATION_JSON})
 	@Produces({MediaType.TEXT_HTML})
-	public Response updateStore(@PathParam("storeId") String storeId, Store store) {
+	public Response updateStore(@PathParam("storeId") int storeId, Store store) {
 		// TODO Auto-generated method stub
 		storeService.updateStore(store);
 		return Response.status(200).entity("Store has been updated").build();
+	}
+	
+	@GET
+	@Path("getStore/id/{storeType}")
+	@Produces({MediaType.APPLICATION_JSON})
+	public Response getStoreById(@PathParam("storeType") int storeType) {
+		// TODO Auto-generated method stub
+		Store result = storeService.getStoreById(storeType);
+		if(result !=null){
+			return Response.status(200).entity(result).build();
+		} else {
+			return Response.status(404).entity("The store with the id " + storeType + " does not exist").build();
+		}
+	}
+	
+	@GET
+	@Path("getStore/name/{storeName}")
+	@Produces({MediaType.APPLICATION_JSON})
+	public Response getStoreByName(@PathParam("storeName") String storeName) {
+		Store result = storeService.getStoreByName(storeName);
+		if(result != null){
+			return Response.status(200).entity(result).build();
+		} else {
+			return Response.status(404).entity("The store with the name " + storeName + " does not exist").build();
+		}
 	}
 
 }

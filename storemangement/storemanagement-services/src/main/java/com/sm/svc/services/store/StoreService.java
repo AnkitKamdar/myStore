@@ -31,4 +31,16 @@ public interface StoreService {
 	 * @param _store
 	 */
 	void updateStore(Store store);
+	
+	/**
+	 * This method is used to get a store by id
+	 * @param storeId
+	 */
+	public Store getStoreById(int storeType);
+	
+	/**
+	 * This method is used to update a store by name
+	 * @param storeName
+	 */
+	public Store getStoreByName(String storeName);
 }
